@@ -32,9 +32,13 @@ composer install
 npm install
 ```
 5. buat file .env
-   copy .env.example .env
+```bash
+copy .env.example .env
+```
 6. Generate Key aplikasi 
-    php artisan key:generate
+```bash
+php artisan key:generate
+```
 7. migrate Database
 ```bash
 php artisan migrate
