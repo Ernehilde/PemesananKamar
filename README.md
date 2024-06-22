@@ -40,7 +40,7 @@ Jalankan run dev untuk menjalankan css tailwind
 ```bash
 npm run dev
 ```
-  dan di Terminal yang 1 lagi jalankan artisan serve untuk menajalankan file laravel
+    dan di Terminal yang 1 lagi jalankan artisan serve untuk menajalankan file laravel
 ```bash
 php artisan serve
 ```
