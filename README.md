@@ -29,7 +29,7 @@ composer install
 ```
 4. Install Paket NPM
 ```bash
-npm intall
+npm install
 ```
 5. migrate Database
 ```bash
