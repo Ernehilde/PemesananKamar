@@ -31,11 +31,15 @@ composer install
 ```bash
 npm install
 ```
-5. migrate Database
+5. buat file .env
+   copy .env.example .env
+6. Generate Key aplikasi 
+    php artisan key:generate
+7. migrate Database
 ```bash
 php artisan migrate
 ```
-6. Jalankan Program (Buka 2 Terminal)
+8. Jalankan Program (Buka 2 Terminal)
 Jalankan run dev untuk menjalankan css tailwind
 ```bash
 npm run dev
