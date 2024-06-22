@@ -8,6 +8,12 @@
 </p>
 
 ## Installation
+Untuk Menjalankan Laravel diperlukan program-program berikut :
+- Composser
+- Node.js
+- NPM
+- Mysql/Xampp
+- PHP
 
 1. Clone repo
 ```bash
