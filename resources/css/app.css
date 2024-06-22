@@ -6,4 +6,20 @@
     .logo-title{
         display: none;
     }
+
+    .container {
+        display: flex;
+        flex-direction: column; /* Mengatur tata letak menjadi kolom */
+        gap: 10px; /* Jarak antara setiap elemen */
+        padding: 10px;
+        padding-top: 3px;
+        justify-content: center; /* Untuk menyusun secara vertikal di tengah jika perlu */
+        margin: auto; /* Untuk membuat div berada di tengah secara horizontal */
+    }
+
+    .c-gambar{
+        width: 200px;
+        margin-left: 100px;
+    }
+
 }

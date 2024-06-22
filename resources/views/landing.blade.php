@@ -42,21 +42,21 @@
 
             <div class="container flex gap-10 p-10 pt-3 justify-center mx-auto">
                 <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
-                    <img class="w-60 rounded-xl" src="{{ asset('images/pantai.jpg') }}" alt="">
+                    <img class="w-60 rounded-xl c-gambar" src="{{ asset('images/pantai.jpg') }}" alt="">
                     <span class="text-blue-500 text-2xl">Pantai</span>
                 </a>
                 <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
-                    <img class="w-60 rounded-xl" src="{{ asset('images/desa.jpg') }}" alt="">
+                    <img class="w-60 rounded-xl c-gambar" src="{{ asset('images/desa.jpg') }}" alt="">
                     <span class="text-blue-500 text-2xl">Pedesaan</span>
 
                 </a>
                 <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
-                    <img class="w-60 rounded-xl" src="{{ asset('images/gunung.webp') }}" alt="">
+                    <img class="w-60 rounded-xl c-gambar" src="{{ asset('images/gunung.webp') }}" alt="">
                     <span class="text-blue-500 text-2xl">Pegunungan</span>
 
                 </a>
                 <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
-                    <img class="w-60 rounded-xl" src="{{ asset('images/kota.jpg') }}" alt="">
+                    <img class="w-60 rounded-xl c-gambar" src="{{ asset('images/kota.jpg') }}" alt="">
                     <span class="text-blue-500 text-2xl">Perkotaan</span>
                 </a>
             </div>
