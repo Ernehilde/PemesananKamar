@@ -1,151 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-app-layout>
+    <x-slot name="mainLogoRoute">
+    </x-slot>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Flower Booking</title>
-    <link rel="shortcut icon" href="{{ asset('images/logo.webp') }}" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-</head>
 
-<body>
-    <header>
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="{{ asset('images/logo.webp') }}" alt="Flower Booking" class="logo">
+    <div class="relative">
+        <section class="relative bg-cover bg-center bg-no-repeat "
+            style="background-image: url({{ asset('images/banner/banner.png') }}" ;>
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-white/95 to-white/0 ltr:bg-gradient-to-r rtl:bg-gradient-to-l sm:bg-transparent sm:from-white/95 sm:to-white/0">
+            </div>
+
+            <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+                <div class="max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
+                    <h1 class="text-3xl font-extrabold sm:text-5xl text-neutral-700">
+                        Cari Kamar Impian untuk Liburan di
+                        <strong class="block font-extrabold text-blue-500">
+                            Flower Booking </strong>
+                    </h1>
+
+                    <p class="mt-4 max-w-lg sm:text-xl/relaxed">
+                        Temukan pengalaman menginap yang tak terlupakan di kamar hotel kami, di mana setiap momen
+                        dirancang untuk memenuhi impian dan keinginan Anda.
+                    </p>
+
+                    <div class="mt-8 flex flex-wrap gap-4 text-center">
+                        <a href="#"
+                            class="block w-full rounded bg-blue-500 px-12 py-3 text-lg font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto">
+                            Book Now </a>
+                        <a href="#"
+                            class="block w-full rounded bg-white px-12 py-3 text-lg font-medium text-blue-500 shadow hover:text-blue-600 focus:outline-none focus:ring-offset-blue-400 active:text-blue-500 sm:w-auto">
+                            Browse Rooms
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div>
+            <div class="text-center text-4xl font-semibold text-blue-500 m-2 mt-5">Categories</div>
+
+            <div class="container flex gap-10 p-10 pt-3 justify-center mx-auto">
+                <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
+                    <img class="w-60 rounded-xl" src="{{ asset('images/pantai.jpg') }}" alt="">
+                    <span class="text-blue-500 text-2xl">Pantai</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white " aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Rooms</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex">
-                        <a class="btn btn-primary" href="{{ route('login') }}">Login</a>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
+                <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
+                    <img class="w-60 rounded-xl" src="{{ asset('images/desa.jpg') }}" alt="">
+                    <span class="text-blue-500 text-2xl">Pedesaan</span>
 
-    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                aria-label="Slide 4"></button>
+                </a>
+                <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
+                    <img class="w-60 rounded-xl" src="{{ asset('images/gunung.webp') }}" alt="">
+                    <span class="text-blue-500 text-2xl">Pegunungan</span>
+
+                </a>
+                <a href="#" class="text-center gap-2 duration-300 hover:scale-105">
+                    <img class="w-60 rounded-xl" src="{{ asset('images/kota.jpg') }}" alt="">
+                    <span class="text-blue-500 text-2xl">Perkotaan</span>
+                </a>
+            </div>
+
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active" style="background-image: url('{{ asset('images/banner/banner.png') }}');">
-                <div class="d-flex align-items-center justify-content-center" style="height: 400px;">
-                    <div class="carousel-caption d-md-block text-center slider_text">
-                        <h3>Flower Booking</h3>
-                        <p>Unlock to enjoy the view of Martine</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image: url({{ asset('images/banner/banner2.png') }});">
-                <div class="d-flex align-items-center justify-content-center" style="height: 400px;">
-                    <div class="carousel-caption d-md-block text-center slider_text">
-                        <h3>Life is Beautiful</h3>
-                        <p>Unlock to enjoy the view of Martine</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image:  url('{{ asset('images/banner/banner.png') }}');">
-                <div class="d-flex align-items-center justify-content-center" style="height: 400px;">
-                    <div class="carousel-caption d-md-block text-center slider_text">
-                        <h3>Book a Room</h3>
-                        <p>Nikmati Liburan Anda</p>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item" style="background-image:  url('{{ asset('images/banner/banner2.png') }}');">
-                <div class="d-flex align-items-center justify-content-center" style="height: 400px;">
-                    <div class="carousel-caption d-md-block text-center slider_text">
-                        <h3>Life is Beautiful</h3>
-                        <p>Unlock to enjoy the view of Martine</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
-    <div class="about_area" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-5 col-lg-5">
-                    <div class="about_info">
-                        <div class="section_title mb-20px">
-                            <span>About Us</span>
-                            <h3>Flower <span> <br> </span>
-                                Booking</h3>
+        <section class="bg-white pt-5">
+            <div class="md:w-3/4 mx-auto">
+                <div class="mx-auto text-center md:max-w-xl lg:max-w-3xl">
+                    <h3 class="mb-6 text-3xl text-blue-500 font-bold">Kelompok 3</h3>
+                    <p class="mb-6 pb-2 text-gray-700 md:mb-12 md:pb-0">
+                        Ini adalah Anggota-anggota dari Kelompok 3
+                    </p>
+                </div>
+
+                <div class="grid gap-6 text-center p-6 md:grid-cols-3 lg:gap-12">
+                    <div class="mb-12 md:mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="{{asset('images/herman.jpg')}}"
+                                class="w-32 rounded-full shadow-lg">
                         </div>
-                        <p class="text-justify">Welcome to Flower Booking, where we specialize in providing a seamless
-                            experience for booking rooms that cater to your comfort and luxury needs. Whether you're
-                            planning a relaxing getaway, a business trip, or a special occasion, we are here to ensure
-                            your stay is nothing short of exceptional.</p>
+                        <h5 class="mb-4 text-xl font-semibold">Ahmad Suherman</h5>
+                        <h6 class="mb-4 font-semibold text-primary">
+                            -
+                        </h6>
+                    </div>
+                    <div class="mb-12 md:mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="{{asset('images/avina.jpg')}}"
+                                class="w-32 rounded-full shadow-lg">
+                        </div>
+                        <h5 class="mb-4 text-xl font-semibold">Avina Gabriela</h5>
+                        <h6 class="mb-4 font-semibold text-primary">
+                            -
+                        </h6>
+                    </div>
+                    <div class="mb-12 md:mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="{{asset('images/gura.png')}}"
+                                class="w-32 rounded-full shadow-lg">
+                        </div>
+                        <h5 class="mb-4 text-xl font-semibold">Candra Purnama</h5>
+                        <h6 class="mb-4 font-semibold text-primary">
+                            211011402049
+                        </h6>
+                    </div>
+                    <div class="mb-12 md:mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="{{asset('images/ado.jpg')}}"
+                                class="w-32 rounded-full shadow-lg">
+                        </div>
+                        <h5 class="mb-4 text-xl font-semibold">Nurmansyah</h5>
+                        <h6 class="mb-4 font-semibold text-primary">
+                            -
+                        </h6>
+                    </div>
+                    <div class="mb-0">
+                        <div class="mb-6 flex justify-center">
+                            <img src="{{asset('images/sofwan.jpg')}}"
+                                class="w-32 rounded-full shadow-lg">
+                        </div>
+                        <h5 class="mb-4 text-xl font-semibold">Sofwan</h5>
+                        <h6 class="mb-4 font-semibold text-primary">
+                            -
+                        </h6>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-7">
-                    <div class="about_thumb d-flex">
-                        <div class="img_1">
-                            <img src="{{ asset('images/banner/about_1.png') }}" alt="">
-                        </div>
-                        <div class="img_2">
-                            <img src="{{ asset('images/banner/about_2.png') }}" alt="">
-                        </div>
+
+
+        </section>
+        <footer class="bg-blue-500 text-center text-neutral-100 lg:text-left">
+
+            <div class="mx-6 py-10 text-center md:text-left">
+                <div class="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                    <div>
+                        <h6 class="mb-4 flex items-center justify-center font-semibold text-xl md:justify-start">
+                            <img class="w-10 h-10" src="{{ asset('images/logo.webp') }}" alt="">
+                            Flower Booking
+                        </h6>
+                        <p class="mb-4 flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="mr-3 h-5 w-5">
+                                <path
+                                    d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+                                <path
+                                    d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+                            </svg>
+                            No. 23/3,
+                            Jl. Gunung Balong II,
+                            Lebak Bulus
+                        </p>
+                        <p class="mb-4 flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="mr-3 h-5 w-5">
+                                <path
+                                    d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                                <path
+                                    d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                            </svg>
+                            flowerbooking@test.com
+                        </p>
+                        <p class="mb-4 flex items-center justify-center md:justify-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="mr-3 h-5 w-5">
+                                <path fill-rule="evenodd"
+                                    d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            0896-2000-6510
+                        </p>
+
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 0) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
-</body>
-
-</html>
+            <div class="bg-white p-2 text-center">
+                <span class="text-neutral-500">© 2024 Copyright:</span>
+                <a class="font-semibold text-neutral-600" href="/">Flower Booking</a>
+            </div>
+        </footer>
+</x-app-layout>

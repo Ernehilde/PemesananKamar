@@ -2,4 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
+@media (max-width: 900px) {
+    .logo-title{
+        display: none;
+    }
+}
